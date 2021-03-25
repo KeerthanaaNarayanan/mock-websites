@@ -1,0 +1,29 @@
+* {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+#container{
+display: flex;
+flex-wrap: wrap;
+/* justify content align items horizontal */
+justify-content: space-evenly;
+height: 400px;
+background: #555;
+/* align item align items vertical, (must be height) */
+/* align-item: stretch; */
+/* align items vertical where extra space */
+align-content: space-between;
+}
+
+.item2{
+align-self: justify;
+order: 3;}
+
+.item{
+background: #f4f4f4;
+border: #ccc 1px solid;
+text-align: center;
+padding: 1 rem;
+margin: 0.5rem;
+flex-basis: 200px;}

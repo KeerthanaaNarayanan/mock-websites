@@ -1,0 +1,16 @@
+li{
+display:inline;}
+
+li a{
+padding-right:20px;}
+img{
+display:block;
+margin:auto;}
+
+.box{
+display:inline-block;
+width: 32%;
+box-sizing: border-box;
+background: $f4f4f4;
+padding: 20px;
+margin-bottom:20px;}

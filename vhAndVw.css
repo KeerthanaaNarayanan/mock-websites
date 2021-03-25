@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: #333 url(https://source.unsplash.com/daily) no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    text-align: center;
+    padding: 5 rem;
+    padding-top: 10rem;
+}
+
+button {
+    text-decoration: none;
+    background: #333;
+    color: #fff;
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+button:hover {
+background: #233;
+color: #555;
+}
+
+@media(max-height: 300px) {
+header {
+padding-top: 5rem;
+}}
