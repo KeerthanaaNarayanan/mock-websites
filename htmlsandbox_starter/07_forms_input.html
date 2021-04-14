@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css_files/forms_input_css.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <title>Forms & Input</title>
+</head>
+<body>
+<header>Personal Information Form</header>
+<form action="process.php">
+    <div class="section">
+        <!--      text input-->
+        <label for="name" class="labels">Name : </label>
+        <input type="text" id="name" name="name">
+    </div>
+    <!--    email input-->
+    <div class="section">
+        <label for="email" class="labels">Email : </label>
+        <input type="email" name="email" id="email" placeholder="enter email">
+    </div>
+    <!--    text area input -->
+    <div class="section">
+        <label for="message" class="labels">Message : </label>
+        <textarea name="message" id="message" cols="50" rows="5" placeholder="enter your text here"></textarea>
+    </div>
+    <!--    drop down-->
+    <div class="section">
+        <label for="gender" class="labels">Gender : </label>
+        <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female" selected>Female</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <!--    number input-->
+    <div class="section">
+        <label for="age" class="labels">Age : </label>
+        <input type="number" name="age" id="age">
+    </div>
+    <!--    date input-->
+    <div class="section">
+        <label for="birthdate" class="labels">Birthdate : </label>
+        <input type="date" name="birthdate" id="birthdate">
+    </div>
+    <!--    radio input-->
+    <div class="section">
+        <label for="membership" class="labels">Membership : </label>
+        <input type="radio" name="membership" value="simple" id="membership">Simple
+        <input type="radio" name="membership" value="standard" id="membership" checked>Standard
+        <input type="radio" name="membership" value="super" id="membership">Super
+    </div>
+    <!--    checkbox input-->
+    <div class="section">
+        <label for="hobby" class="labels">Hobbies : </label>
+        <input type="checkbox" name="membership" value="art" id="hobby">Arts and Crafts
+        <input type="checkbox" name="membership" value="programming" id="hobby">Programming
+        <input type="checkbox" name="membership" value="driving" id="hobby">Driving
+        <input type="checkbox" name="membership" value="reading" id="hobby">Reading books
+        <input type="checkbox" name="membership" value="super" id="hobby">Driving
+        <input type="checkbox" name="membership" value="super" id="hobby">Driving
+    </div>
+    <!--    submit and reset buttons and input-->
+    <input type="submit" value="Submit" class="end-buttons">
+    <!--    <button type="submit">Submit</button>-->
+    <input type="reset" value="Reset" class="end-buttons">
+</form>
+<footer>This is by developer @keerthanaa_narayanan copyrights &copy; reserved</footer>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+/* css reset */
+/*
+* {
+margin: 0;
+padding: 0;
+}
+h3{
+color: green;
+}
+.container{
+margin:auto:}
+#box{
+color:red;
+border: 4px green solid;
+background: aqua;
+padding: 10px;
+}
+*/
+ /* floating and alignment */
+
+*{
+box-size: border-box;}
+.container{
+width: 960px;
+margin: auto;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 1.4em;
+}
+h1{
+visibility:hidden;}
+#box1{
+padding: 5px;
+margin: 5px;
+border: 2px black solid;
+}
+.clr{
+clear:both;
+}
+#box2{
+float: left;
+width: 68%;
+border: 2px black solid;}
+
+#box3{
+float:right;
+width: 30%;
+border: 2px black solid;}
+
+#box4{
+float:right;
+width: 30%;
+border: 2px black solid;}

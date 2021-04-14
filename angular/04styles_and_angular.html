@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="" ng-init="myCol='lightblue';quantity=5;cost=5;person={firstName:'John',lastName:'Doe'}">
+    <input type="text" style="background-color:{{myCol}}" ng-model="myCol">
+    <p>here is the quantity * cost value : {{quantity * cost}}</p>
+    <p>here is the quantity * cost value : <span ng-bind="quantity * cost"></span></p>
+    <p>firstname is {{person.firstName}}</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Errors</title>
+</head>
+<body>
+<p id="demo"></p>
+<input type="text" min="5" max="10" step="1" placeholder="enter a number" id="input">
+<button onclick="myFunction()">Submit</button>
+<p id="para"></p>
+<p id="type"></p>
+<script>
+    function myFunction() {
+        var x, y;
+        x = document.getElementById('input').value;
+        try {
+        if (x == '') throw 'empty';
+        if (isNaN(x)) throw 'string';
+        if (x < 5) throw 'too low';
+        if (x > 10) throw 'too high';
+        }
+        catch(err) {
+        document.getElementById('para').innerHTML = 'Input is ' + err;
+        }
+        finally {
+            document.getElementById('input').value = "";
+            }
+        }
+        try {
+        aleddrt("welcome guest");
+        }
+        catch(err) {
+        document.getElementById('demo').innerHTML = err.message;
+        }
+
+</script>
+</body>
+</html>

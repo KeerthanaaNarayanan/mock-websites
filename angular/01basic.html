@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular basic</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="" ng-init="firstName='John'">
+        <p>Enter something in the text field</p>
+        <input type="text" placeholder="Enter Name" ng-model="name">
+        <h1><span ng-bind="firstName"></span></h1>
+        <h1>Hello {{name}} <span ng-bind="firstName"></span></h1>
+        <p>we can see that all the ng attributes in tags are not identified by the html</p>
+    </div>
+</body>
+</html>

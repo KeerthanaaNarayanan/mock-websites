@@ -1,0 +1,23 @@
+1. glyphicons
+2. badges/ labels
+3. progress bar
+4. pagination
+5. pager
+6. list groups
+7. panels
+8. dropdown
+9. collapse - show and hide some contents
+10. tabs/pills
+11. Navbar
+12. Forms
+13. Inputs
+14. Inputs 2
+15. Input sizing
+16. Media objects
+17. carousel - that image scrolling to the right and left is called carousel - (images sliding one after the other without even hover or click)
+18. modal - opens other tab
+19. tooltip - shows information when hovered
+20. popover - it opens a popup when a button is clicked
+21. scrollspy - it is to add scrolls to next navbar content
+22. affix - display as fix to top and side navbar
+23. filters- they are used in tables for easier search

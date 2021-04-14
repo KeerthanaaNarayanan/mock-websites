@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Object Notation</title>
+</head>
+<body>
+<h1>JavaScript Object Notation - JSON</h1>
+<ul>
+    <li>JSON stands for JavaScript Object Notation</li>
+    <li>JSON is a lightweight data interchange format</li>
+    <li>JSON is language independent *</li>
+    <li>JSON is "self-describing" and easy to understand</li>
+</ul>
+<p id="demo"></p>
+<script>
+    var object = {
+    "employees": [
+    {"name": "Keerthanaa", "last_name": "Narayanan"},
+    {"name": "Hariprasath", "last_name": "Narayanan"},
+    {"name": "Ashwin", "last_name": "Ravikumar"}
+    ]
+    }
+    document.getElementById('demo').innerHTML = object.employees[1].name;
+    document.getElementById('demo').innerHTML += '\t' + object.employees[2].last_name;
+    document.getElementById('demo').innerHTML += object.employees[0].name;
+</script>
+</body>
+</html>

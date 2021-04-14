@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Variable</title>
+    <style>
+    :root{
+    --light-color: #f4f4f4;
+    --primary-color: red;
+    --secondary-color: yellow;
+    }
+    .box {
+    --max-width: 1100px;
+    --box-1-width: 300px;
+    --box-2-width: 400px;
+    }
+        * {
+        margin: 0;
+        padding: 0;
+        }
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4;
+        background: var(--light-color);
+        color: var(--primary-color);}
+        h1 {
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>CSS Variables</h1>
+</header>
+<div class="container">
+    <div class="box box-1"></div>
+    <h3>Heading</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, porro.</p>
+</div>
+
+</body>
+</html>

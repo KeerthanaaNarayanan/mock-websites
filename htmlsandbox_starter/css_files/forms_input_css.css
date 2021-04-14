@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    font-family: 'Train One', cursive;
+    font-size: 30px;
+    color: #BEBDBF;
+}
+body{
+background: #0D1A26;
+}
+form {
+    text-align: center;
+    border: 1px solid;
+    margin: 40px 100px 5px 100px;
+    background-color: #3B4B59;
+    color: #BEBDBF;
+    height: 500px;
+    width: 500px;
+}
+
+form div {
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+form div input {
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #BEBDBF;
+    padding-top: 10px;
+}
+
+labels {
+    text-align: left;
+}
+
+.end-buttons{
+    background-color: #6C7D8C;
+    color: #1A2E40;
+    padding: 10px 40px;
+    margin: 5px;
+    border: 0.5px;
+    border-radius: 5px;
+}
+
+.end-buttons:hover {
+    background-color: #0D1A26;
+    color: #BEBDBF;
+    border: 2px #BEBDBF dotted;
+}

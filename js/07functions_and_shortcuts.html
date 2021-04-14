@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions and Shortcuts</title>
+</head>
+<body>
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<script>
+<!-- function declared with a variable -->
+        var hello;
+        hello = function() {
+        return 'I am in this function hello';
+        }
+        document.getElementById('demo').innerHTML = hello();
+
+<!-- normal function -->
+        function hello2() {
+        return 'I am in this function hello2';
+        }
+        document.getElementById('demo2').innerHTML = hello2();
+
+<!-- function with () => shorcut with paranthesis -->
+        hello3 = () => {
+        return 'I am in this function hello3';
+        }
+        document.getElementById('demo3').innerHTML = hello3();
+
+<!-- function with () => without paranthesis -->
+        hello4 = () => 'I am in this function hello4';
+        document.getElementById('demo4').innerHTML = hello4();
+
+<!-- function with parameters -->
+        hello_with_parameters = (val) => 'I am in hello_with_parameters with ' + val + ' as parameter';
+        document.getElementById('demo5').innerHTML = hello_with_parameters('input');
+
+<!--  function without () -->
+        hello_without_brackets = val => 'Hello ' + val;
+        document.getElementById('demo6').innerHTML = hello_without_brackets('Universe');
+    </script>
+</body>
+</html>

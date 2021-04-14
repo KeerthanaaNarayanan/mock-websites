@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<div data-ng-app="" data-ng-init="firstName='John'">
+    <p>Enter something in the text field</p>
+    <input type="text" placeholder="Enter Name" data-ng-model="name">
+    <h1><span data-ng-bind="firstName"></span></h1>
+    <h1>Hello {{name}} <span data-ng-bind="firstName"></span></h1>
+    <p>Using data-ng attributes in html tags makes it html valid.</p>
+</div>
+</body>
+</html>

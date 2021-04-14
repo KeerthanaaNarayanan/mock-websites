@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Asynchronous Javascript And XML</title>
+</head>
+<body>
+<h1>Asynchronous Javascript And XML</h1>
+<script>
+    'use strict';
+    const request = new XMLHttpRequest();
+    request.open('GET', 'https://restcountries.eu/rest/v2/name/portugal');
+    request.send();
+    request.addEventListener('load', function() {
+    const data = JSON.parse(this.responseText);
+    console.log(data);
+        const html =`
+    <article class="country">
+     <img class="country__img" src="${data.flag}" />
+     <div class="country__data>
+        <h3 class="country__name">Country</h3>
+        <h4 class="country__region">${data.region}</h4>
+        <p class="country__row"><span>${data.population}</span></p>
+        <p class="country__row">${data.languages[1].name}</p>
+        <p class="country__row">${data.currencies[0].name}</p>
+     </div>
+     </article>
+    `;
+
+    });
+</script>
+</body>
+</html>

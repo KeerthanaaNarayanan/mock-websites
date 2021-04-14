@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+  <script>
+    function myfunction() {
+    var array = ['banana', 'apple', 'goa', 'berry', 'jackfruit'];
+    var sorted = array.sort();
+    var reversed = sorted.reverse();
+    document.getElementById('demo').innerHTML = sorted;
+    alert(reversed);
+    }
+  </script>
+</head>
+<body>
+<button type="button" id="clicker" onclick="myfunction()">click me</button>
+<p id="demo"></p>
+<button type="button" onclick="print()">I print this page</button>
+</body>
+</html>

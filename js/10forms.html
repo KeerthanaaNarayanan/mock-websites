@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    <script>
+        myfunction = () => {
+        x = document.forms['myForm']['myName'].value;
+        if (x == ''){
+        alert("Enter any name, it is empty");
+        }
+        if (!isNaN(x)){
+        alert("It should not be a number");}}
+    </script>
+</head>
+<body>
+<h1>Forms and validation in JavaScript</h1>
+<form action="" name="myForm" onsubmit="return myfunction()">
+    <label for="myNameId">Name</label>
+    <input type="text" name="myName" id="myNameId" required>
+    <input type="submit">
+</form>
+</body>
+</html>

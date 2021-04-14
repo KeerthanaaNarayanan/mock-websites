@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Getters and Setters</title>
+
+</head>
+<body>
+<h1>Why Using Getters and Setters?</h1>
+<ul>
+    <li>It gives simpler syntax</li>
+    <li>It allows equal syntax for properties and methods</li>
+    <li>It can secure better data quality</li>
+    <li>It is useful for doing things behind-the-scenes</li>
+</ul>
+<p id="demo"></p>
+<script>
+    var person = {
+    "name": "ken",
+    "scl": "gsk",
+    "clg": "smit",
+    "vayasu": '',
+<!--    get age() {-->
+<!--        return this.vayasu;-->
+<!--    }-->
+    set age(year) {
+        this.vayasu = 2021 - year;
+    }
+    };
+    person.age = 1996;
+    for(x in person) {
+    document.getElementById('demo').innerHTML += person[x] + ' ';
+    }
+</script>
+</body>
+</html>

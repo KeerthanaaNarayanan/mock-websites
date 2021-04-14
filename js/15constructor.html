@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Constructors for objects</title>
+</head>
+<body>
+<h1>Object Constructors</h1>
+<h3>this method can be used to add getters and setters.</h3>
+<p>The examples from the previous chapters are limited. They only create single objects.<br>
+    Sometimes we need a "blueprint" for creating many objects of the same "type".<br>
+    The way to create an "object type", is to use an object constructor function.<br>
+    In the example above, function Person() is an object constructor function.<br>
+    Objects of the same type are created by calling the constructor function with the <b>new</b> keyword:</p>
+<p id="demo"></p>
+<script>
+    function Person(fname, lname, year, eye) {
+        this.firstName = fname;
+        this.lastName = lname;
+        this.age = 2021 - year;
+        this.eyeColor = eye;
+        this.nationality = 'English';
+        this.name = function() {
+        return this.firstName + ' ' + this.lastName;};
+    }
+    var my = new Person('ken', 'ben', 1996, 'black');
+    var ben = new Person('ben', 'ten', 1995, 'blue');
+    document.getElementById('demo').innerHTML += my.age;
+    document.getElementById('demo').innerHTML += '\n' + my.eyeColor;
+    document.getElementById('demo').innerHTML += '\n' + ben.age;
+    document.getElementById('demo').innerHTML += '\n' + ben.name();
+
+</script>
+</body>
+</html>

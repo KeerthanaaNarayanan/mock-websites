@@ -1,0 +1,24 @@
+/* direct child - children of div*/
+div > p{
+background: #ddd;
+}
+
+/* directly after  - sibling of div */
+div + p {
+background: #333;
+color: #fff;
+}
+
+/* by attribute */
+a[target] {
+background: red;
+}
+
+a[target='_self'] {
+background: green;
+}
+
+input[type='text'], input[type='email'] {
+    width: 100%;
+    margin-bottom: 5px;
+}
