@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<div data-ng-app="myApp" data-ng-controller="filterCtrl">
+    <p>{{price | currency}}</p>
+    <ol>
+        <li data-ng-repeat="x in names | orderBy:'country'">
+            {{ x.name + ', ' + x.country }}
+        </li>
+    </ol>
+    <input type="text" data-ng-model="text">
+    <ol>
+        <li data-ng-repeat="x in names | filter: text">
+            {{ x.name + ', ' + x.country }}
+        </li>
+    </ol>
+    <table>
+        <tr>
+            <th ng-click="orderByMe('name')">Name</th>
+            <th ng-click="orderByMe('country')">Country</th>
+        </tr>
+        <tr data-ng-repeat="x in names | orderBy:myOrderBy">
+            <td>{{x.name}}</td>
+            <td>{{x.country}}</td>
+        </tr>
+    </table>
+</div>
+<script>
+        var app = angular.module('myApp', []);
+        app.controller("filterCtrl", ($scope) => {
+        $scope.price = 50;
+        $scope.names = [
+            {name:'Jani',country:'Norway'},
+            {name:'Carl',country:'Sweden'},
+            {name:'Margareth',country:'England'},
+            {name:'Hege',country:'Norway'},
+            {name:'Joe',country:'Denmark'},
+            {name:'Gustav',country:'Sweden'},
+            {name:'Birgit',country:'Denmark'},
+            {name:'Mary',country:'England'},
+            {name:'Kai',country:'Norway'}
+        ];
+        $scope.girls = [
+            'Jani',
+            'Carl',
+            'Margareth',
+            'Hege',
+            'Joe',
+            'Gustav',
+            'Birgit',
+            'Mary',
+            'Kai'
+        ];
+        $scope.orderByMe = (x) => {
+            $scope.myOrderBy = x;
+        }
+        });
+
+
+</script>
+</body>
+</html>

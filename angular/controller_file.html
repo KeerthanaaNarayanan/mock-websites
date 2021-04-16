@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Seperate controller file</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<h1>My html page with seperate controller file.</h1>
+<div data-ng-app="myApp" data-ng-controller="myCtrl">
+    <p>{{fullname() | uppercase}}</p>
+</div>
+<script src="controller_file.js"></script>
+</body>
+</html>

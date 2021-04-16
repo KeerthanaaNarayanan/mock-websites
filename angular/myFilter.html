@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Custom Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<h1>My Custom Filter</h1>
+<div data-ng-app="myApp" data-ng-controller="myCtrl">
+    <ul>
+        <li data-ng-repeat="x in names">
+            {{x | myFormat}}
+        </li>
+    </ul>
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', ($scope) => {
+        $scope.names = [
+            'Jesi',
+            'Kiruthiga',
+            'kamal',
+            'Hasan',
+            'Raji',
+            'Saadhana',
+            'mamooth'
+        ];
+    });
+    app.filter('myFormat', () => {
+        return function(x) {
+            var i, c, temp='';
+            for(i=0; i<x.length; i++) {
+                c = x[i];
+                if (i%2 == 0){
+                    c = c.toUpperCase();
+                }
+                temp += c;
+            }
+            return temp;
+        };
+    });
+</script>
+</body>
+</html>

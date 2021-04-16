@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<div data-ng-app="myApp" data-ng-controller="myCtrl">
+    <form novalidate>
+        First Name: <input type="text" data-ng-model="user.firstname">
+        Second Name: <input type="text" data-ng-model="user.lastname"><br>
+        <button data-ng-click="reset()">Reset</button>
+    </form>
+    <p>{{user}}</p>
+    <p>{{master}}</p>
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', ($scope) => {
+        $scope.master = {"firstname":"John","lastname":"Cena"};
+        $scope.reset = () => {
+            $scope.user = angular.copy($scope.master);
+        };
+        $scope.reset();
+    });
+</script>
+</body>
+</html>

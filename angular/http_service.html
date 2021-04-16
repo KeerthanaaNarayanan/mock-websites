@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+    <p>Today's welcome message is:</p>
+
+    <h3> data: {{myWelcome}}</h3>
+    <h3> status: {{status}}</h3>
+    <h3> config: {{config}}</h3>
+    <h3> headers: {{headers}}</h3>
+    <h3> statusText: {{statusText}}</h3>
+
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+  $http.get("controller_file.js").then(function (response) {
+      $scope.myWelcome = response.data;
+      $scope.status = response.status;
+      $scope.config = response.config;
+      $scope.headers = response.headers;
+      $scope.statusText = response.statusText;
+  }, function(response){
+        $scope.myWelcome = "Something went wrong";
+  });
+});
+</script>
+
+</body>
+</html>

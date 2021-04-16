@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <table>
+        <tr>
+            <th>Serial number</th>
+            <th ng-click="ClickedMe('Name')">Name</th>
+            <th ng-click="ClickedMe('Country')">Country</th>
+        </tr>
+        <tr data-ng-repeat="x in dataJson | orderBy: myOrder">
+            <td ng-if="$odd" style="background-color: #f1f1f1">{{$index + 1}}</td>
+            <td ng-if="$even">{{$index + 1}}</td>
+            <td ng-if="$odd" style="background-color: #f1f1f1">{{x.Name}}</td>
+            <td ng-if="$even">{{x.Name}}</td>
+            <td ng-if="$odd" style="background-color: #f1f1f1">{{x.Country | uppercase}}</td>
+            <td ng-if="$even">{{x.Country | uppercase}}</td>
+        </tr>
+    </table>
+    <br>
+    <select data-ng-model="selectedName" data-ng-options="x.Name for x in dataJson"></select>
+    <select>
+        <option data-ng-repeat="x in dataJson" value="{{x.Name}}">{{x.Name}}</option>
+    </select>
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', ($scope, $http) => {
+        $scope.ClickedMe = (x) => {
+            return myOrder = x;
+        }
+        $http.get('json.json').then( (response) => {
+            $scope.dataJson = response.data.records;
+            $scope.dataJsonNames = response.data.records;
+        }, (response) => {
+            $scope.dataJson = 'something went wrong';
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
